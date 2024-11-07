@@ -16,7 +16,9 @@
   font-style: normal;
   font-weight: 200;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -24,6 +26,7 @@
 
 html {
   font-size: 16px;
+  line-height: 1.5;
 }
 
 .landing-page {
@@ -38,6 +41,9 @@ html {
   padding: 2rem;
 }
 
+.header {
+  letter-spacing: 0.5px;
+}
 .header__title {
   font-size: 1.5rem;
 }
@@ -54,32 +60,104 @@ html {
   word-wrap: break-word;
 }
 
+.cards-container {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
 .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   border-top: 8px solid transparent;
   border-radius: 20px;
   background-color: #ffffff;
-  box-shadow: 2px 4px 13px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 4px 13px 4px rgba(137, 134, 134, 0.25);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1.5rem;
 }
-
-.card--cyan {
-  border-color: #44d3d2;
-}
-
-.card--red {
-  border-color: #ea5454;
-}
-
-.card--orange {
-  border-color: #fcae4a;
-}
-
-.card--blue {
-  border-color: #549ef2;
-}
-
 .card__title {
   font-size: 1.25rem;
   font-weight: 600;
+}
+.card__description {
+  font-size: 0.875rem;
+}
+
+.card--supervisor {
+  border-color: #44d3d2;
+}
+
+.card--team-builder {
+  border-color: #ea5454;
+}
+
+.card--karma {
+  border-color: #fcae4a;
+}
+
+.card--calculator {
+  border-color: #549ef2;
+}
+
+.card--supervisor {
+  border-color: #44d3d2;
+}
+.card--supervisor::after {
+  content: "";
+  display: block;
+  background-image: url("../images/icon-supervisor.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 100%;
+  height: 5rem;
+  margin-top: 1.25rem;
+}
+
+.card--team-builder {
+  border-color: #ea5454;
+}
+.card--team-builder::after {
+  content: "";
+  display: block;
+  background-image: url("../images/icon-team-builder.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 100%;
+  height: 5rem;
+  margin-top: 1.25rem;
+}
+
+.card--karma {
+  border-color: #fcae4a;
+}
+.card--karma::after {
+  content: "";
+  display: block;
+  background-image: url("../images/icon-karma.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 100%;
+  height: 5rem;
+  margin-top: 1.25rem;
+}
+
+.card--calculator {
+  border-color: #549ef2;
+}
+.card--calculator::after {
+  content: "";
+  display: block;
+  background-image: url("../images/icon-calculator.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 100%;
+  height: 5rem;
+  margin-top: 1.25rem;
 }
 
 .text--opacity {
