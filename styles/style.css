@@ -65,8 +65,7 @@ html {
 
 .cards-container {
   margin-top: 4rem;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 1.25rem;
 }
 
@@ -95,28 +94,12 @@ html {
 .card--supervisor {
   border-color: #44d3d2;
 }
-
-.card--team-builder {
-  border-color: #ea5454;
-}
-
-.card--karma {
-  border-color: #fcae4a;
-}
-
-.card--calculator {
-  border-color: #549ef2;
-}
-
-.card--supervisor {
-  border-color: #44d3d2;
-}
 .card--supervisor::after {
   content: "";
   display: block;
   background-image: url("../images/icon-supervisor.svg");
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: bottom right;
   width: 100%;
   height: 5rem;
   margin-top: 1.25rem;
@@ -130,7 +113,7 @@ html {
   display: block;
   background-image: url("../images/icon-team-builder.svg");
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: bottom right;
   width: 100%;
   height: 5rem;
   margin-top: 1.25rem;
@@ -144,7 +127,7 @@ html {
   display: block;
   background-image: url("../images/icon-karma.svg");
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: bottom right;
   width: 100%;
   height: 5rem;
   margin-top: 1.25rem;
@@ -158,7 +141,7 @@ html {
   display: block;
   background-image: url("../images/icon-calculator.svg");
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: bottom right;
   width: 100%;
   height: 5rem;
   margin-top: 1.25rem;
@@ -166,4 +149,30 @@ html {
 
 .text--opacity {
   opacity: 0.5;
+}
+
+@media screen and (min-width: 768px) {
+  .cards-container {
+    display: grid;
+    width: 100%;
+    max-width: 1200px;
+    grid-template-areas: "supervisor team-builder calculator" "supervisor karma calculator";
+    grid-template-rows: auto auto;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .card--supervisor {
+    grid-area: supervisor;
+  }
+  .card--team-builder {
+    grid-area: team-builder;
+  }
+  .card--karma {
+    grid-area: karma;
+  }
+  .card--calculator {
+    grid-area: calculator;
+  }
 }/*# sourceMappingURL=style.css.map */

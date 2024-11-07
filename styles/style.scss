@@ -10,7 +10,7 @@
   background-color: globals.$lightgrey;
   font-family: globals.$font-family;
   color: globals.$darkgrey;
-  padding: globals.$spacing-xl
+  padding: globals.$spacing-xl;
 }
 
 .header {
@@ -39,8 +39,7 @@
 
 .cards-container {
   margin-top: 4rem;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: globals.$spacing-m;
 }
 
@@ -70,53 +69,69 @@
 
 @mixin card-icon($image) {
   &::after {
-    content: '';
+    content: "";
     display: block;
     background-image: url($image);
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: bottom right;
     width: 100%;
     height: 5rem;
     margin-top: globals.$spacing-m;
   }
 }
 
-.card--supervisor{
-  border-color: globals.$cyan;
-}
-.card--team-builder {
-  border-color: globals.$red;
-  
-}
-
-.card--karma {
-  border-color: globals.$orange;
-}
-
-.card--calculator {
-  border-color: globals.$blue;
-}
-
 .card--supervisor {
   border-color: globals.$cyan;
-  @include card-icon('../images/icon-supervisor.svg');
+  @include card-icon("../images/icon-supervisor.svg");
 }
 
 .card--team-builder {
   border-color: globals.$red;
-  @include card-icon('../images/icon-team-builder.svg');
+  @include card-icon("../images/icon-team-builder.svg");
 }
 
 .card--karma {
   border-color: globals.$orange;
-  @include card-icon('../images/icon-karma.svg');
+  @include card-icon("../images/icon-karma.svg");
 }
 
 .card--calculator {
   border-color: globals.$blue;
-  @include card-icon('../images/icon-calculator.svg');
+  @include card-icon("../images/icon-calculator.svg");
 }
 
 .text--opacity {
   opacity: 0.5;
+}
+
+@media screen and (min-width: 768px) {
+  .cards-container {
+    display: grid;
+    width: 100%;
+    max-width: 1200px;
+    grid-template-areas:
+      "supervisor team-builder calculator"
+      "supervisor karma calculator";
+    grid-template-rows: auto auto;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .card--supervisor {
+    grid-area: supervisor;
+  }
+
+  .card--team-builder {
+    grid-area: team-builder;
+  }
+
+  .card--karma {
+    grid-area: karma;
+  }
+
+  .card--calculator {
+    grid-area: calculator;
+  }
 }
