@@ -78,9 +78,6 @@ html {
   border-radius: 20px;
   background-color: #ffffff;
   box-shadow: 2px 4px 13px 4px rgba(137, 134, 134, 0.25);
-  width: 100%;
-  min-width: 300px;
-  max-width: 500px;
   padding: 1.5rem;
 }
 .card__title {
@@ -156,23 +153,7 @@ html {
     display: grid;
     width: 100%;
     max-width: 1200px;
-    grid-template-areas: "supervisor team-builder calculator" "supervisor karma calculator";
-    grid-template-rows: auto auto;
-    grid-template-columns: repeat(3, minmax(250px, 1fr));
     justify-content: center;
     align-items: center;
-    gap: 2rem 3rem;
-  }
-  .card--supervisor {
-    grid-area: supervisor;
-  }
-  .card--team-builder {
-    grid-area: team-builder;
-  }
-  .card--karma {
-    grid-area: karma;
-  }
-  .card--calculator {
-    grid-area: calculator;
   }
 }/*# sourceMappingURL=style.css.map */
