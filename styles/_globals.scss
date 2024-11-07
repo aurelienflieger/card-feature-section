@@ -1,0 +1,53 @@
+// COLORS
+$red: #ea5454;
+$cyan: #44d3d2;
+$orange: #fcae4a;
+$blue: #549ef2;
+$darkgrey: #4d4f62;
+$lightgrey: #fafafa;
+
+// TYPOGRAPHY
+$font-family: "Poppins", sans-serif;
+$font-weight-el: 100;
+$font-weight-rg: 400;
+$font-weight-sb: 600;
+$font-size-xs: 12px;
+$font-size-s: 14px;
+$font-size-m: 16px;
+$font-size-l: 18px;
+$font-size-xl: 20px;
+
+// SPACING
+$spacing-xs: 8px;
+$spacing-s: 16px;
+$spacing-m: 24px;
+$spacing-l: 32px;
+$spacing-xl: 40px;
+
+// BORDER RADIUS
+$br-1: 10px;
+$br-2: 20px;
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/Poppins-Regular.ttf") format("truetype")
+    format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/Poppins-SemiBold.ttf") format("truetype")
+    format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/Poppins-ExtraLight.ttf") format("truetype")
+    format("truetype");
+  font-style: normal;
+  font-weight: 100;
+}
