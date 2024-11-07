@@ -34,7 +34,8 @@ html {
   flex-direction: column;
   align-items: center;
   width: 100dvw;
-  height: 100dvh;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: #fafafa;
   font-family: "Poppins", sans-serif;
   color: #4d4f62;
@@ -43,6 +44,7 @@ html {
 
 .header {
   letter-spacing: 0.5px;
+  text-align: center;
 }
 .header__title {
   font-size: 1.5rem;
@@ -58,6 +60,7 @@ html {
   font-size: 0.875rem;
   text-align: center;
   word-wrap: break-word;
+  max-width: 55ch;
 }
 
 .cards-container {
@@ -76,8 +79,9 @@ html {
   border-radius: 20px;
   background-color: #ffffff;
   box-shadow: 2px 4px 13px 4px rgba(137, 134, 134, 0.25);
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
+  min-width: 300px;
+  max-width: 500px;
   padding: 1.5rem;
 }
 .card__title {

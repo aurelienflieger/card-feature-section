@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   width: 100dvw;
-  height: 100dvh;
+  height: fit-content;
   background-color: globals.$lightgrey;
   font-family: globals.$font-family;
   color: globals.$darkgrey;
@@ -15,6 +15,7 @@
 
 .header {
   letter-spacing: 0.5px;
+  text-align: center;
 
   &__title {
     font-size: globals.$font-size-l;
@@ -32,6 +33,7 @@
     font-size: globals.$font-size-xs;
     text-align: center;
     word-wrap: break-word;
+    max-width: 55ch;
   }
 }
 
@@ -51,7 +53,9 @@
   border-radius: 20px;
   background-color: globals.$white;
   box-shadow: 2px 4px 13px 4px rgba(137, 134, 134, 0.25);
-  width: fit-content;
+  width: 100%;
+  min-width: 300px;
+  max-width: 500px;
   padding: globals.$spacing-l;
 
   &__title {
